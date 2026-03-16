@@ -1282,13 +1282,13 @@ mode_tree_key(struct mode_tree_data *mtd, struct client *c, key_code *key,
 		mode_tree_display_help(mtd, c);
 		break;
 	case KEYC_UP:
-	case 'k':
+	case 'j':
 	case KEYC_WHEELUP_PANE:
 	case 'p'|KEYC_CTRL:
 		mode_tree_up(mtd, 1);
 		break;
 	case KEYC_DOWN:
-	case 'j':
+	case 'k':
 	case KEYC_WHEELDOWN_PANE:
 	case 'n'|KEYC_CTRL:
 		mode_tree_down(mtd, 1);
@@ -1374,7 +1374,7 @@ mode_tree_key(struct mode_tree_data *mtd, struct client *c, key_code *key,
 		mode_tree_build(mtd);
 		break;
 	case KEYC_LEFT:
-	case 'h':
+	case 'l':
 	case '-':
 		if (line->flat || !current->expanded)
 			current = current->parent;
@@ -1387,7 +1387,7 @@ mode_tree_key(struct mode_tree_data *mtd, struct client *c, key_code *key,
 		}
 		break;
 	case KEYC_RIGHT:
-	case 'l':
+	case 'h':
 	case '+':
 		if (line->flat || current->expanded)
 			mode_tree_down(mtd, 0);

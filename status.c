@@ -1113,20 +1113,20 @@ status_prompt_translate_key(struct client *c, key_code key, key_code *new_key)
 		*new_key = KEYC_DC;
 		return (1);
 	case KEYC_DOWN:
-	case 'j':
+	case 'k':
 		*new_key = KEYC_DOWN;
 		return (1);
 	case KEYC_LEFT:
-	case 'h':
+	case 'l':
 		*new_key = KEYC_LEFT;
 		return (1);
 	case 'a':
 	case KEYC_RIGHT:
-	case 'l':
+	case 'h':
 		*new_key = KEYC_RIGHT;
 		return (1);
 	case KEYC_UP:
-	case 'k':
+	case 'j':
 		*new_key = KEYC_UP;
 		return (1);
 	case 'h'|KEYC_CTRL:

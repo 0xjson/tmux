@@ -371,7 +371,7 @@ menu_key_cb(struct client *c, void *data, struct key_event *event)
 	switch (event->key & ~KEYC_MASK_FLAGS) {
 	case KEYC_BTAB:
 	case KEYC_UP:
-	case 'k':
+	case 'j':
 		if (old == -1)
 			old = 0;
 		do {
@@ -394,7 +394,7 @@ menu_key_cb(struct client *c, void *data, struct key_event *event)
 			return (1);
 		/* FALLTHROUGH */
 	case KEYC_DOWN:
-	case 'j':
+	case 'k':
 		if (old == -1)
 			old = 0;
 		do {
