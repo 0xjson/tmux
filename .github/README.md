@@ -1,95 +1,139 @@
-# Welcome to tmux!
+<div align="center">
 
-tmux is a terminal multiplexer: it enables a number of terminals to be created,
-accessed, and controlled from a single screen. tmux may be detached from a
-screen and continue running in the background, then later reattached.
+# 🖥️ tmux — Terminal Multiplexer
 
-This release runs on OpenBSD, FreeBSD, NetBSD, Linux, macOS and Solaris.
+<p>
+  <img src="https://img.shields.io/badge/platform-Linux%20|%20macOS%20|%20*BSD%20|%20Solaris-blue?style=flat-square&logo=linux" alt="Platform">
+  <img src="https://img.shields.io/badge/license-ISC-green?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/⌨️%20layout-Colemak--DH-orange?style=flat-square" alt="Keyboard Layout">
+</p>
 
-## Dependencies
+<p>
+  <b>🚀 A personal fork with Colemak-DH keybindings</b><br>
+  <sub>Upstream: <a href="https://github.com/tmux/tmux">github.com/tmux/tmux</a></sub>
+</p>
 
-tmux depends on [libevent](https://libevent.org) 2.x, available from [this
-page](https://github.com/libevent/libevent/releases/latest).
+</div>
 
-It also depends on [ncurses](https://www.gnu.org/software/ncurses/), available
-from [this page](https://invisible-mirror.net/archives/ncurses/).
+---
 
-To build tmux, a C compiler (for example gcc or clang), make, pkg-config and a
-suitable yacc (yacc or bison) are needed.
+## ✨ What is tmux?
 
-## Installation
+**tmux** is a terminal multiplexer that lets you create, access, and control multiple terminals from a single screen. Detach sessions and keep them running in the background, then reattach later — perfect for remote work, long-running processes, and organized development workflows.
 
-### Binary packages
+<p align="center">
+  <img src="https://img.shields.io/badge/🎯-Session%20Management-blue?style=for-the-badge" alt="Sessions">
+  <img src="https://img.shields.io/badge/🪟-Window%20Management-purple?style=for-the-badge" alt="Windows">
+  <img src="https://img.shields.io/badge/📦-Pane%20Splitting-green?style=for-the-badge" alt="Panes">
+</p>
 
-Some platforms provide binary packages for tmux, although these are sometimes
-out of date. Examples are listed on
-[this page](https://github.com/tmux/tmux/wiki/Installing).
+---
 
-### From release tarball
+## 🎹 Colemak-DH Keybindings
 
-To build and install tmux from a release tarball, use:
+This fork uses optimized **Colemak-DH** navigation keys for a more ergonomic experience:
 
-~~~bash
-./configure && make
-sudo make install
-~~~
+| Key | Direction | Description |
+|:---:|:---------:|:------------|
+| <kbd>L</kbd> | ⬅️ Left | Navigate to left pane / previous window |
+| <kbd>H</kbd> | ➡️ Right | Navigate to right pane / next window |
+| <kbd>J</kbd> | ⬆️ Up | Navigate to pane above / window above |
+| <kbd>K</kbd> | ⬇️ Down | Navigate to pane below / window below |
 
-tmux can use the utempter library to update utmp(5), if it is installed - run
-configure with `--enable-utempter` to enable this.
+> 💡 These bindings are designed for the Colemak-DH keyboard layout, keeping navigation keys on the home row for comfortable access.
 
-For more detailed instructions on building and installing tmux, see
-[this page](https://github.com/tmux/tmux/wiki/Installing).
+---
 
-### From version control
+## 📦 Dependencies
 
-To get and build the latest from version control - note that this requires
-`autoconf`, `automake` and `pkg-config`:
+To build tmux, you'll need:
 
-~~~bash
-git clone https://github.com/tmux/tmux.git
-cd tmux
-sh autogen.sh
-./configure && make
-~~~
+| Package | Source |
+|:--------|:-------|
+| **libevent 2.x** | [GitHub Releases](https://github.com/libevent/libevent/releases/latest) |
+| **ncurses** | [invisible-mirror.net](https://invisible-mirror.net/archives/ncurses/) |
+| **Build tools** | C compiler (`gcc` or `clang`), `make`, `pkg-config`, `yacc`/`bison` |
 
-## Contributing
+**Optional:** `utempter` library for utmp(5) updates (enable with `--enable-utempter`)
 
-Bug reports, feature suggestions and especially code contributions are most
-welcome. Please send by email to:
+---
 
-tmux-users@googlegroups.com
+## 🔧 Installation
 
-Or open a GitHub issue or pull request. **Please read [this
-document](CONTRIBUTING.md) before opening an issue.**
+### 📥 From Release Tarball
 
-There is [a list of suggestions for contributions](https://github.com/tmux/tmux/wiki/Contributing).
-Please feel free to ask on the mailing list if you're thinking of working on something or need
-further information.
+```bash
+$ ./configure && make
+$ sudo make install
+```
 
-## Documentation
+### 🛠️ From Source (Latest)
 
-For documentation on using tmux, see the tmux.1 manpage. View it from the
-source tree with:
+Requires `autoconf`, `automake`, and `pkg-config`:
 
-~~~bash
-nroff -mdoc tmux.1|less
-~~~
+```bash
+$ git clone https://github.com/tmux/tmux.git
+$ cd tmux
+$ sh autogen.sh
+$ ./configure && make
+$ sudo make install
+```
 
-A small example configuration is in `example_tmux.conf`.
+---
 
-And a bash(1) completion file at:
+## 📚 Documentation
 
-https://github.com/scop/bash-completion/blob/main/completions-core/tmux.bash
+| Resource | Link |
+|:---------|:-----|
+| 📖 Man Page | `nroff -mdoc tmux.1 \| less` |
+| 📝 Example Config | `example_tmux.conf` |
+| 🌐 Wiki | [github.com/tmux/tmux/wiki](https://github.com/tmux/tmux/wiki) |
+| ❓ FAQ | [github.com/tmux/tmux/wiki/FAQ](https://github.com/tmux/tmux/wiki/FAQ) |
+| 🎨 Bash Completion | [scop/bash-completion](https://github.com/scop/bash-completion/blob/main/completions/tmux) |
 
-For debugging, run tmux with `-v` or `-vv` to generate server and client log
-files in the current directory.
+> 🐛 **Debugging:** Run tmux with `-v` and `-vv` flags to generate server and client log files in the current directory.
 
-## Support
+---
 
-The tmux mailing list for general discussion and bug reports is:
+## 🤝 Contributing
 
-https://groups.google.com/forum/#!forum/tmux-users
+Contributions are welcome! 🎉
 
-Subscribe by sending an email to:
+- 🐛 **Bug reports** — Report issues you encounter
+- 💡 **Feature suggestions** — Share your ideas
+- 🔧 **Code contributions** — Submit pull requests
 
-tmux-users+subscribe@googlegroups.com
+📧 **Email:** [tmux-users@googlegroups.com](mailto:tmux-users@googlegroups.com)
+
+🐙 **GitHub:** [Open an issue](https://github.com/tmux/tmux/issues) or [Pull Request](https://github.com/tmux/tmux/pulls)
+
+---
+
+## 💬 Support & Community
+
+Join the discussion and get help:
+
+<p align="center">
+  <a href="https://groups.google.com/forum/#!forum/tmux-users">
+    <img src="https://img.shields.io/badge/📧-Mailing%20List-red?style=for-the-badge" alt="Mailing List">
+  </a>
+</p>
+
+**Subscribe:** Send an email to [tmux-users+subscribe@googlegroups.com](mailto:tmux-users+subscribe@googlegroups.com)
+
+---
+
+## 📄 License
+
+- This `README` and `CHANGES` files → **[ISC License](https://opensource.org/licenses/ISC)**
+- All other files → See license and copyright notice at the start of each file
+
+---
+
+<div align="center">
+
+<p><b>Made with ❤️ for terminal enthusiasts</b></p>
+
+<sub>🖥️ ⚡ 🚀</sub>
+
+</div>
