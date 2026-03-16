@@ -103,7 +103,7 @@ Contributions are welcome! 🎉
 - 💡 **Feature suggestions** — Share your ideas
 - 🔧 **Code contributions** — Submit pull requests
 
-📧 **Email:** [tmux-users@googlegroups.com](mailto:tmux-users@googlegroups.com)
+📧 **Email:** [tmux-users@googlegroups.com](mailto:jhanmar.thng@gmail.com)
 
 🐙 **GitHub:** [Open an issue](https://github.com/tmux/tmux/issues) or [Pull Request](https://github.com/tmux/tmux/pulls)
 
@@ -119,7 +119,7 @@ Join the discussion and get help:
   </a>
 </p>
 
-**Subscribe:** Send an email to [tmux-users+subscribe@googlegroups.com](mailto:tmux-users+subscribe@googlegroups.com)
+**Subscribe:** Send an email to [tmux-users+subscribe@googlegroups.com](mailto:jhanmar.thng@gmail.com)
 
 ---
 
